@@ -1,9 +1,9 @@
 // swift-tools-version:5.1
-
 import PackageDescription
 
 let package = Package(
     name: "Cache",
+    platforms: [.iOS(.v11), .macOS(.v10_12), .tvOS(.v11)],
     products: [
         .library(
             name: "Cache",
@@ -19,6 +19,5 @@ let package = Package(
             name: "CacheTests",
             dependencies: ["Cache"],
             path: "Tests"),
-    ],
-    swiftLanguageVersions: [.v5]
+    ]
 )
